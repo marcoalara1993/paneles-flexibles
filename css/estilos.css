@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+  }
+  
+  .panels {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .panel {       
+    color: orange;
+    
+    
+    transition:
+      font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      background 0.2s;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panel1 { background-image:url(https://static.laverdad.es/www/pre2017/multimedia/noticias/201705/16/media/cortadas/avrillavigne-kyL-U30416308966TcE-575x323@La%20Verdad.jpg); }
+  .panel2 { background-image:url(https://pbs.twimg.com/profile_images/1359651854913662979/yGe-Wmm8.jpg); }
+  .panel3 { background-image:url(https://assets.tonica.la/__export/1563291267983/sites/debate/img/2019/07/16/67110404_10156923023744300_1782341866549673984_n.jpg_1359985867.jpg); }
+  .panel4 { background-image:url(http://2.bp.blogspot.com/-UXtYz3eYFFo/TeyEHTrHdDI/AAAAAAAAACs/BAbtUt3eljI/s1600/Avril+Lavigne+Fuck.jpg); }
+  .panel5 { background-image:url(https://i.pinimg.com/originals/78/05/54/78055435f8ea61ac9ad4702f3c0018c2.jpg); }
+
+  
+  .panel > * {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .panel > *:first-child { transform: translateY(-100%); }
+  .panel.open-active > *:first-child { transform: translateY(0); }
+  .panel > *:last-child { transform: translateY(100%); }
+  .panel.open-active > *:last-child { transform: translateY(0); }
+
+  .panel p {
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2em;
+  }
+  
+  .panel p:nth-child(2) {
+    font-size: 4em;
+  }
+
+  .panel.open {
+    flex: 5;
+    font-size: 40px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .panel p {
+      font-size: 1em;
+    }
+  }
